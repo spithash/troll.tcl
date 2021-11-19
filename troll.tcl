@@ -3,14 +3,17 @@
 #############################################################################################################
 # Gets troll quotes and makes people suffer!                                                                #
 #############################################################################################################
+# Version 2.5   (19.11.2021)                                                                                #
+# Changed url because the old one was dead and enabled tls.                                                 #
+# tcl-tls is required to be installed on your server.                                                       #
+#############################################################################################################
 #                                                                                                           #
 # Version 2.1   (20.03.2012)                                                                                #
 #                                                                                                           #
 # Added flood protection. More like, throttle control. Special thanks to username.                          #
 #                                                                                                           #
 # Any official release of troll.tcl will be announced in http://forum.egghelp.org/viewtopic.php?t=17078     #
-# Official troll.tcl updates will be in egghelp.org's TCL archive,                                          #
-# Or here: http://bsdunix.info/spithash/troll/troll.tcl                                                     #
+# Official troll.tcl updates will be in this repo                                                           #
 #############################################################################################################
 # Version 2.0                                                                                               #
 #                                                                                                           #
@@ -26,6 +29,7 @@
 #############################################################################################################
 
 package require http
+package require tls
 
 # Channel flag.
 setudef flag troll
@@ -45,9 +49,9 @@ if {[info exists troll(lasttime,$chan)] && [expr $troll(lasttime,$chan) + $delay
     putserv "NOTICE $nick :You can use only 1 command in $delay seconds. Wait [expr $delay - [expr [clock seconds] - $troll(lasttime,$chan)]] seconds and try again, nigga."
     return 0
 }
-
+http::register https 443 [list ::tls::socket -autoservername true]
 ::http::config -urlencoding utf-8 -useragent "Mozilla/5.0 (X11; U; Linux i686; el-GR; rv:1.8.1) Gecko/2010112223 Firefox/3.6.12"
-set url [::http::geturl "http://rolloffle.churchburning.org/troll_me.php" -timeout 15000]
+set url [::http::geturl "https://ilektronika-farmakeia-online.gr/nou/meow.php" -timeout 15000]
 set data [::http::data $url]
 ::http::cleanup $url
 
