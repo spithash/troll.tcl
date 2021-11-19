@@ -13,7 +13,7 @@
 # Added flood protection. More like, throttle control. Special thanks to username.                          #
 #                                                                                                           #
 # Any official release of troll.tcl will be announced in http://forum.egghelp.org/viewtopic.php?t=17078     #
-# Official troll.tcl updates will be in this repo                                                           #
+# Official troll.tcl updates will be in this repo https://github.com/spithash/troll.tcl                     #
 #############################################################################################################
 # Version 2.0                                                                                               #
 #                                                                                                           #
