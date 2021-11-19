@@ -55,7 +55,7 @@ set url [::http::geturl "https://ilektronika-farmakeia-online.gr/nou/meow.php" -
 set data [::http::data $url]
 ::http::cleanup $url
 
-regsub -all -- {\n} $data "" data;
+regsub -all -- {\n} $data " " data;
 regexp -nocase -- {<p .*?>(.*?)</p>} $data -> info
 regsub -all -- {(<strong[^>]*>)|(</strong>)} $info "\002" info;
 
