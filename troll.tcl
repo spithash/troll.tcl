@@ -1,13 +1,13 @@
 #############################################################################################################
-# Troll v2.1.1 TCL by spithash@Libera                                                                       #
+# Troll v2.5 TCL by spithash@Libera                                                                         #
 #############################################################################################################
 # Gets troll quotes and makes people suffer!                                                                #
 #############################################################################################################
 # Version 2.5   (19.11.2021)                                                                                #
+#                                                                                                           #
 # Changed url because the old one was dead and enabled tls.                                                 #
 # tcl-tls is required to be installed on your server.                                                       #
 #############################################################################################################
-#                                                                                                           #
 # Version 2.1   (20.03.2012)                                                                                #
 #                                                                                                           #
 # Added flood protection. More like, throttle control. Special thanks to username.                          #
@@ -66,5 +66,5 @@ while {$info != ""} {
 set troll(lasttime,$chan) [clock seconds]
 
 }
-putlog "\002troll.tcl\002 v2.1.1 by spithash@Libera iz up and trollin'"
+putlog "\002troll.tcl\002 v2.5 by spithash@Libera iz up and trollin'"
 # EOF
