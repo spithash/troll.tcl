@@ -51,7 +51,7 @@ if {[info exists troll(lasttime,$chan)] && [expr $troll(lasttime,$chan) + $delay
 }
 http::register https 443 [list ::tls::socket -autoservername true]
 ::http::config -urlencoding utf-8 -useragent "Mozilla/5.0 (X11; U; Linux i686; el-GR; rv:1.8.1) Gecko/2010112223 Firefox/3.6.12"
-set url [::http::geturl "https://ilektronika-farmakeia-online.gr/nou/meow.php" -timeout 15000]
+set url [::http::geturl "https://fnet.gr/nou/meow.php" -timeout 15000]
 set data [::http::data $url]
 ::http::cleanup $url
 
