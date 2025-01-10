@@ -1,5 +1,5 @@
 #############################################################################################################
-# Troll v2.5 TCL by spithash@Libera                                                                         #
+# Troll v2.5.1 TCL by spithash@Libera                                                                       #
 #############################################################################################################
 # Gets troll quotes and makes people suffer!                                                                #
 #############################################################################################################
@@ -69,5 +69,5 @@ proc parse {nick uhost hand chan text} {
         putlog "DEBUG: Data fetched: $data"
     }
 }
-putlog "\002troll.tcl\002 v2.5 by spithash@Libera iz up and trollin'"
+putlog "\002troll.tcl\002 v2.5.1 by spithash@Libera iz up and trollin'"
 # EOF
