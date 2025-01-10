@@ -1,5 +1,4 @@
-
-# troll.tcl v2.5 for eggdrop bots by spithash@Libera
+# troll.tcl v2.5.1 for eggdrop bots by spithash@Libera
 
 Gets troll quotes and makes people suffer!
 
